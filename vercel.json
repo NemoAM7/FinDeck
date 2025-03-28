@@ -13,6 +13,7 @@
     }
   ],
   "env": {
-    "PYTHONPATH": "."
+    "PYTHONPATH": ".",
+    "VERCEL": "1"
   }
 } 
