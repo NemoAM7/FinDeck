@@ -4,4 +4,5 @@ pydantic==2.7.2
 groq==0.4.0
 python-dotenv==1.0.0
 requests==2.31.0
-sqlalchemy==2.0.25 
+sqlalchemy==2.0.25
+python-multipart==0.0.6 
