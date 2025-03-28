@@ -23,5 +23,4 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 # Create the database tables
 def init_db():
     # Drop existing tables and recreate them
-    Base.metadata.drop_all(bind=engine)  # This drops the existing tables
     Base.metadata.create_all(bind=engine)  # This creates new tables 
