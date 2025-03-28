@@ -97,9 +97,30 @@ async def upload_image(image: UploadFile = File(...), db: Optional[Session] = De
         # Read image data without saving to disk
         image_data = await image.read()
         
+        # Check for Groq API key
+        if not os.environ.get("GROQ_API_KEY"):
+            raise HTTPException(
+                status_code=500,
+                detail="GROQ_API_KEY environment variable not set. Please configure it in your Vercel project settings."
+            )
+        
         # Process image using Groq client
-        groq_client = GroqClient()
-        csv_data_content = await groq_client.process_image_bytes(image_data)
+        try:
+            groq_client = GroqClient()
+            csv_data_content = await groq_client.process_image_bytes(image_data)
+            
+            # Check if the response contains an error message
+            if csv_data_content.startswith("Error:"):
+                raise HTTPException(
+                    status_code=500,
+                    detail=csv_data_content
+                )
+        except ValueError as ve:
+            # Catch specific errors from GroqClient
+            raise HTTPException(
+                status_code=500,
+                detail=str(ve)
+            )
         
         if not csv_data_content:
             raise HTTPException(
@@ -155,55 +176,78 @@ async def upload_image(image: UploadFile = File(...), db: Optional[Session] = De
 def get_csv_info(csv_id: int, db: Optional[Session] = Depends(get_db)):
     """Get information about a stored CSV file."""
     
-    if is_vercel:
-        if csv_id not in csv_storage:
-            raise HTTPException(status_code=404, detail="CSV data not found")
-        
-        data = csv_storage[csv_id]
-        return {
-            "id": data["id"],
-            "filename": data["filename"],
-            "source_type": data["source_type"]
-        }
-    else:
-        csv_data = db.query(CSVData).filter(CSVData.id == csv_id).first()
-        if not csv_data:
-            raise HTTPException(status_code=404, detail="CSV data not found")
-        
-        return {
-            "id": csv_data.id,
-            "filename": csv_data.filename,
-            "source_type": csv_data.source_type
-        }
+    try:
+        if is_vercel:
+            if csv_id not in csv_storage:
+                raise HTTPException(status_code=404, detail="CSV data not found")
+            
+            data = csv_storage[csv_id]
+            return {
+                "id": data["id"],
+                "filename": data["filename"],
+                "source_type": data["source_type"]
+            }
+        else:
+            csv_data = db.query(CSVData).filter(CSVData.id == csv_id).first()
+            if not csv_data:
+                raise HTTPException(status_code=404, detail="CSV data not found")
+            
+            return {
+                "id": csv_data.id,
+                "filename": csv_data.filename,
+                "source_type": csv_data.source_type
+            }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error retrieving CSV info: {str(e)}"
+        )
 
 @router.get("/csv/{csv_id}/content")
 def get_csv_content(csv_id: int, db: Optional[Session] = Depends(get_db)):
     """Get the content of a stored CSV file."""
     
-    if is_vercel:
-        if csv_id not in csv_storage:
-            raise HTTPException(status_code=404, detail="CSV data not found")
-        
-        return {"content": csv_storage[csv_id]["content"]}
-    else:
-        csv_data = db.query(CSVData).filter(CSVData.id == csv_id).first()
-        if not csv_data:
-            raise HTTPException(status_code=404, detail="CSV data not found")
-        
-        return {"content": csv_data.content}
+    try:
+        if is_vercel:
+            if csv_id not in csv_storage:
+                raise HTTPException(status_code=404, detail="CSV data not found")
+            
+            return {"content": csv_storage[csv_id]["content"]}
+        else:
+            csv_data = db.query(CSVData).filter(CSVData.id == csv_id).first()
+            if not csv_data:
+                raise HTTPException(status_code=404, detail="CSV data not found")
+            
+            return {"content": csv_data.content}
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error retrieving CSV content: {str(e)}"
+        )
 
 @router.get("/csv/", response_model=List[CSVResponse])
 def list_all_csvs(db: Optional[Session] = Depends(get_db)):
     """List all stored CSV files."""
     
-    if is_vercel:
-        return [
-            {"id": data["id"], "filename": data["filename"], "source_type": data["source_type"]}
-            for data in csv_storage.values()
-        ]
-    else:
-        csv_data = db.query(CSVData).all()
-        return [
-            {"id": data.id, "filename": data.filename, "source_type": data.source_type}
-            for data in csv_data
-        ] 
+    try:
+        if is_vercel:
+            return [
+                {"id": data["id"], "filename": data["filename"], "source_type": data["source_type"]}
+                for data in csv_storage.values()
+            ]
+        else:
+            csv_data = db.query(CSVData).all()
+            return [
+                {"id": data.id, "filename": data.filename, "source_type": data.source_type}
+                for data in csv_data
+            ]
+    except Exception as e:
+        # Handle any unexpected errors gracefully
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error listing CSV files: {str(e)}"
+        ) 
