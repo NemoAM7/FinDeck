@@ -100,3 +100,7 @@
 2025-03-28 18:00:07,905 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
 2025-03-28 18:00:07,930 - data_exploration_server - INFO - Data exploration server is running
 2025-03-28 18:00:07,948 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-03-29 03:07:45,232 - data_exploration_server - INFO - Data exploration server starting up. Logs will be written to server/logs/data_exploration.log
+2025-03-29 03:07:45,232 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
+2025-03-29 03:07:45,254 - data_exploration_server - INFO - Data exploration server is running
+2025-03-29 03:07:45,270 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest

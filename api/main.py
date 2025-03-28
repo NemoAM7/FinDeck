@@ -22,12 +22,10 @@ async def health_check():
     return {"status": "healthy"}
 
 # Only initialize the database if not running on Vercel
-is_vercel = os.environ.get('VERCEL') == '1'
 
-if not is_vercel:
-    # Only import and initialize DB when not on Vercel
-    from api.input_api.models import init_db
-    init_db()
+# Only import and initialize DB when not on Vercel
+from api.input_api.models import init_db
+init_db()
 
 # Import the router only after the app is initialized
 # Do not initialize database here to avoid size issues
