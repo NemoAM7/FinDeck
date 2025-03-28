@@ -1,0 +1,11 @@
+id,price,bedrooms,bathrooms,sqft,neighborhood,year_built,days_on_market
+1,350000,2,1,950,Downtown,1985,45
+2,450000,3,2,1250,Eastside,1992,30
+3,550000,3,2.5,1800,Westside,2005,15
+4,650000,4,3,2200,Northend,2010,7
+5,380000,2,2,1050,Downtown,1998,60
+6,520000,3,2,1500,Eastside,2002,21
+7,750000,4,3.5,2800,Westside,2015,10
+8,420000,2,2,1100,Northend,1995,40
+9,620000,3,2.5,1900,Downtown,2008,25
+10,850000,5,4,3200,Westside,2018,5 

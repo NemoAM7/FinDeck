@@ -1,0 +1,102 @@
+2025-03-27 17:10:40,362 - data_exploration_server - INFO - Data exploration server starting up. Logs will be written to server/logs/data_exploration.log
+2025-03-27 17:10:40,362 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
+2025-03-27 17:10:40,375 - data_exploration_server - INFO - Data exploration server is running
+2025-03-27 17:10:40,385 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-03-27 17:11:39,922 - data_exploration_server - INFO - Data exploration server starting up. Logs will be written to server/logs/data_exploration.log
+2025-03-27 17:11:39,934 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
+2025-03-27 17:11:39,945 - data_exploration_server - INFO - Data exploration server is running
+2025-03-27 17:11:39,955 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-03-27 17:12:21,329 - data_exploration_server - INFO - Data exploration server starting up. Logs will be written to server/logs/data_exploration.log
+2025-03-27 17:12:21,329 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
+2025-03-27 17:12:21,339 - data_exploration_server - INFO - Data exploration server is running
+2025-03-27 17:12:21,349 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-03-27 17:12:58,492 - data_exploration_server - INFO - Data exploration server starting up. Logs will be written to server/logs/data_exploration.log
+2025-03-27 17:12:58,492 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
+2025-03-27 17:12:58,502 - data_exploration_server - INFO - Data exploration server is running
+2025-03-27 17:12:58,512 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-03-27 17:16:36,127 - data_exploration_server - INFO - Data exploration server starting up. Logs will be written to server/logs/data_exploration.log
+2025-03-27 17:16:36,127 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
+2025-03-27 17:16:36,137 - data_exploration_server - INFO - Data exploration server is running
+2025-03-27 17:16:36,147 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-03-27 17:17:08,759 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-03-27 17:17:08,759 - data_exploration_server - INFO - Loading CSV file: data/sample_data.csv as sample_data
+2025-03-27 17:17:08,760 - data_exploration_server - ERROR - Error loading CSV: [Errno 2] No such file or directory: 'data/sample_data.csv'
+2025-03-27 17:17:29,239 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-03-27 17:17:29,239 - data_exploration_server - INFO - Loading CSV file: server/data/sample_data.csv as sample_data
+2025-03-27 17:17:29,252 - data_exploration_server - INFO - Successfully loaded server/data/sample_data.csv with 10 rows and 8 columns
+2025-03-27 17:17:38,199 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-03-27 17:17:38,199 - data_exploration_server - INFO - Listing all loaded DataFrames
+2025-03-27 17:18:03,339 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-03-27 17:18:03,339 - data_exploration_server - INFO - Getting info for DataFrame: sample_data
+2025-03-27 17:18:03,353 - data_exploration_server - INFO - Successfully retrieved info for DataFrame: sample_data
+2025-03-27 17:18:39,998 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-03-27 17:18:39,998 - data_exploration_server - INFO - Loading CSV file: data.csv as image_data
+2025-03-27 17:18:39,998 - data_exploration_server - ERROR - Error loading CSV: [Errno 2] No such file or directory: 'data.csv'
+2025-03-27 17:25:26,799 - data_exploration_server - INFO - Data exploration server starting up. Logs will be written to server/logs/data_exploration.log
+2025-03-27 17:25:26,799 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
+2025-03-27 17:25:58,257 - data_exploration_server - INFO - Data exploration server starting up. Logs will be written to server/logs/data_exploration.log
+2025-03-27 17:25:58,257 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
+2025-03-27 17:27:35,950 - data_exploration_server - INFO - Data exploration server starting up. Logs will be written to server/logs/data_exploration.log
+2025-03-27 17:27:35,950 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
+2025-03-27 17:31:38,501 - data_exploration_server - INFO - Data exploration server starting up. Logs will be written to server/logs/data_exploration.log
+2025-03-27 17:31:38,501 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
+2025-03-27 17:31:38,795 - data_exploration_server - INFO - Data exploration server is running
+2025-03-27 17:31:38,804 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-03-27 17:33:23,337 - data_exploration_server - INFO - Data exploration server starting up. Logs will be written to server/logs/data_exploration.log
+2025-03-27 17:33:23,337 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
+2025-03-27 17:33:23,626 - data_exploration_server - INFO - Data exploration server is running
+2025-03-27 17:33:23,636 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-03-27 17:33:44,739 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-03-27 17:33:44,739 - data_exploration_server - INFO - Processing table image: input.jpeg
+2025-03-27 17:33:44,739 - data_exploration_server - ERROR - Error processing table image: [Errno 2] No such file or directory: 'input.jpeg'
+2025-03-27 17:33:55,254 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-03-27 17:33:55,254 - data_exploration_server - INFO - Processing table image: server/input.jpeg
+2025-03-27 17:33:55,641 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-03-27 17:33:55,641 - data_exploration_server - ERROR - Error processing image with Groq: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2025-03-27 17:33:55,641 - data_exploration_server - ERROR - Error processing table image: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2025-03-27 17:34:57,473 - data_exploration_server - INFO - Data exploration server starting up. Logs will be written to server/logs/data_exploration.log
+2025-03-27 17:34:57,473 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
+2025-03-27 17:34:57,766 - data_exploration_server - INFO - Data exploration server is running
+2025-03-27 17:34:57,776 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-03-27 17:35:09,977 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-03-27 17:35:09,978 - data_exploration_server - INFO - Processing table image: server/input.jpeg
+2025-03-27 17:35:10,299 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-03-27 17:35:10,300 - data_exploration_server - ERROR - Error processing image with Groq: Error code: 404 - {'error': {'message': 'The model `llama2-70b-vision-preview` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2025-03-27 17:35:10,300 - data_exploration_server - ERROR - Error processing table image: Error code: 404 - {'error': {'message': 'The model `llama2-70b-vision-preview` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2025-03-27 17:36:05,798 - data_exploration_server - INFO - Data exploration server starting up. Logs will be written to server/logs/data_exploration.log
+2025-03-27 17:36:05,798 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
+2025-03-27 17:36:06,096 - data_exploration_server - INFO - Data exploration server is running
+2025-03-27 17:36:06,105 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-03-27 17:36:19,089 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-03-27 17:36:19,089 - data_exploration_server - INFO - Processing table image: server/image.jpeg
+2025-03-27 17:36:19,089 - data_exploration_server - ERROR - Error processing table image: [Errno 2] No such file or directory: 'server/image.jpeg'
+2025-03-27 17:37:11,120 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-03-27 17:37:11,120 - data_exploration_server - INFO - Processing table image: server/input.jpeg
+2025-03-27 17:37:14,626 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 17:37:14,645 - data_exploration_server - INFO - Saved extracted table to: server/input_extracted.csv
+2025-03-27 17:37:24,664 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-03-27 17:37:24,664 - data_exploration_server - INFO - Listing all loaded DataFrames
+2025-03-27 17:37:56,816 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-03-27 17:37:56,817 - data_exploration_server - INFO - Getting info for DataFrame: df_2
+2025-03-27 17:37:56,825 - data_exploration_server - INFO - Successfully retrieved info for DataFrame: df_2
+2025-03-27 17:39:31,819 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-03-27 17:39:31,819 - data_exploration_server - INFO - Getting info for DataFrame: df_2
+2025-03-27 17:39:31,823 - data_exploration_server - INFO - Successfully retrieved info for DataFrame: df_2
+2025-03-27 17:40:13,314 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-03-27 17:40:13,314 - data_exploration_server - INFO - Loading CSV file: data/sales.csv
+2025-03-27 17:40:13,315 - data_exploration_server - ERROR - Error loading CSV: [Errno 2] No such file or directory: 'data/sales.csv'
+2025-03-27 17:40:47,588 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-03-27 17:40:47,588 - data_exploration_server - INFO - Getting info for DataFrame: df_2
+2025-03-27 17:40:47,593 - data_exploration_server - INFO - Successfully retrieved info for DataFrame: df_2
+2025-03-27 18:39:00,269 - data_exploration_server - INFO - Data exploration server starting up. Logs will be written to server/logs/data_exploration.log
+2025-03-27 18:39:00,270 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
+2025-03-27 18:39:00,282 - data_exploration_server - INFO - Data exploration server is running
+2025-03-27 18:39:00,291 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-03-27 18:55:51,979 - data_exploration_server - INFO - Data exploration server starting up. Logs will be written to server/logs/data_exploration.log
+2025-03-27 18:55:51,980 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
+2025-03-27 18:55:51,991 - data_exploration_server - INFO - Data exploration server is running
+2025-03-27 18:55:52,001 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-03-28 18:00:07,905 - data_exploration_server - INFO - Data exploration server starting up. Logs will be written to server/logs/data_exploration.log
+2025-03-28 18:00:07,905 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
+2025-03-28 18:00:07,930 - data_exploration_server - INFO - Data exploration server is running
+2025-03-28 18:00:07,948 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest

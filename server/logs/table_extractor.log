@@ -1,0 +1,2 @@
+2025-03-27 15:52:33,135 - table_extractor - INFO - Processing image: server\input.jpeg
+2025-03-27 15:52:34,027 - table_extractor - INFO - Saved table data to: server/data/extracted_table.csv
