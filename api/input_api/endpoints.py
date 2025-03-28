@@ -7,6 +7,13 @@ from .schemas import CSVInput, CSVResponse
 from sqlalchemy.orm import Session
 from ..groq_client import GroqClient  # Use relative import
 
+
+import logging
+
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+
+
 router = APIRouter()
 
 # Check if running on Vercel
@@ -246,7 +253,7 @@ def list_all_csvs(db: Optional[Session] = Depends(get_db)):
                 for data in csv_data
             ]
     except Exception as e:
-        # Handle any unexpected errors gracefully
+        logging.error(f"Error listing CSV files: {str(e)}")
         raise HTTPException(
             status_code=500,
             detail=f"Error listing CSV files: {str(e)}"
