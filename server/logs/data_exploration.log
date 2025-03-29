@@ -104,3 +104,15 @@
 2025-03-29 03:07:45,232 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
 2025-03-29 03:07:45,254 - data_exploration_server - INFO - Data exploration server is running
 2025-03-29 03:07:45,270 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-03-29 19:47:17,495 - data_exploration_server - INFO - Data exploration server starting up. Logs will be written to server/logs/data_exploration.log
+2025-03-29 19:47:17,506 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
+2025-03-29 19:47:17,556 - data_exploration_server - INFO - Data exploration server is running
+2025-03-29 19:47:17,570 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-03-29 19:48:47,411 - data_exploration_server - INFO - Data exploration server starting up. Logs will be written to server/logs/data_exploration.log
+2025-03-29 19:48:47,411 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
+2025-03-29 19:48:47,456 - data_exploration_server - INFO - Data exploration server is running
+2025-03-29 19:48:47,466 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-03-29 19:55:09,222 - data_exploration_server - INFO - Data exploration server starting up. Logs will be written to server/logs/data_exploration.log
+2025-03-29 19:55:09,222 - data_exploration_server - INFO - You can monitor logs in a separate terminal using: 'type server/logs/data_exploration.log' (Windows) or 'tail -f server/logs/data_exploration.log' (Unix)
+2025-03-29 19:55:09,263 - data_exploration_server - INFO - Data exploration server is running
+2025-03-29 19:55:09,273 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest

@@ -4,7 +4,6 @@ import os
 
 app = FastAPI()
 
-# Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Allows all origins
@@ -12,6 +11,16 @@ app.add_middleware(
     allow_methods=["*"],  # Allows all methods
     allow_headers=["*"],  # Allows all headers
 )
+
+@app.on_event("startup")
+async def startup_event():
+    """Initialize databases on startup"""
+    # Initialize databases
+    from api.input_api.models import init_db
+    init_db()
+    
+    from api.llm_api.models import init_llm_db
+    init_llm_db()
 
 @app.get("/")
 async def root():
@@ -21,18 +30,20 @@ async def root():
 async def health_check():
     return {"status": "healthy"}
 
-# Only initialize the database if not running on Vercel
-
-# Only import and initialize DB when not on Vercel
+# Initialize databases
 from api.input_api.models import init_db
 init_db()
 
-# Import the router only after the app is initialized
-# Do not initialize database here to avoid size issues
+from api.llm_api.models import init_llm_db
+init_llm_db()
+
+# Include routers
 from api.input_api.endpoints import router as input_api_router
 app.include_router(input_api_router, prefix="/api/input", tags=["input"])
 
-# Only execute this when running directly as a script
+from api.llm_api.endpoints import router as llm_api_router
+app.include_router(llm_api_router, prefix="/api/llm", tags=["llm"])
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000, reload=True) 
