@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "smartbi-clone"
+version = "0.1.0"
+description = "Data Science Assistant"
+authors = ["Your Name <your.email@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "0.108.0"
+uvicorn = "0.25.0"
+pydantic = "2.7.2"
+groq = "0.4.0"
+python-dotenv = "1.0.0"
+requests = "2.31.0"
+sqlalchemy = "2.0.25"
+python-multipart = "0.0.6"
+opencv-python-headless = "4.8.0"
+numpy = "1.24.0"
+pytesseract = "0.3.10"
+pandas = "2.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api" 
